@@ -1,6 +1,6 @@
-// ============================================================================
-// Rock Reading - Process Manager Implementation
-// ============================================================================
+//============================================================================
+//Rock Reading - Process Manager Implementation
+//============================================================================
 #include "process_manager.h"
 #include <algorithm>
 
@@ -44,7 +44,7 @@ std::vector<ProcessInfo> ProcessManager::GetRunningProcesses() {
 
     if (Process32FirstW(hSnap, &pe)) {
         do {
-            // Skip system idle process
+            //Skip system idle process
             if (pe.th32ProcessID == 0) continue;
 
             ProcessInfo info;
@@ -56,7 +56,7 @@ std::vector<ProcessInfo> ProcessManager::GetRunningProcesses() {
 
     CloseHandle(hSnap);
 
-    // Sort alphabetically by name (case-insensitive)
+    //Sort alphabetically by name (case-insensitive)
     std::sort(processes.begin(), processes.end(),
               [](const ProcessInfo& a, const ProcessInfo& b) {
                   return _wcsicmp(a.name.c_str(), b.name.c_str()) < 0;
@@ -68,10 +68,10 @@ std::vector<ProcessInfo> ProcessManager::GetRunningProcesses() {
 bool ProcessManager::Attach(DWORD pid) {
     Detach();
 
-    // Try full access first
+    //Try full access first
     m_hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
 
-    // Fallback to minimal access
+    //Fallback to minimal access
     if (!m_hProcess) {
         m_hProcess = OpenProcess(
             PROCESS_VM_READ | PROCESS_VM_WRITE | PROCESS_VM_OPERATION |
@@ -83,7 +83,7 @@ bool ProcessManager::Attach(DWORD pid) {
 
     m_pid = pid;
 
-    // Get the process name
+    //Get the process name
     WCHAR name[MAX_PATH] = {};
     if (GetModuleBaseNameW(m_hProcess, nullptr, name, MAX_PATH)) {
         m_processName = name;
@@ -133,7 +133,7 @@ std::vector<ProcessManager::MemoryRegion> ProcessManager::GetReadableRegions() c
 
     while (VirtualQueryEx(m_hProcess, reinterpret_cast<LPCVOID>(address),
                           &mbi, sizeof(mbi))) {
-        // Include committed, non-guarded, accessible regions
+        //Include committed, non-guarded, accessible regions
         if (mbi.State == MEM_COMMIT &&
             !(mbi.Protect & PAGE_GUARD) &&
             !(mbi.Protect & PAGE_NOACCESS)) {
