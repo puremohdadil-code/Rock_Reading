@@ -210,7 +210,7 @@ static void DrawEyeLogo(HDC hdc, int x, int y, int w, int h) {
     MoveToEx(hdc, cx, cy - pr + 2, nullptr);
     LineTo(hdc, cx, cy + pr - 2);
 
-    // Corner dots
+    //Corner dots
     int d = pr / 2;
     HBRUSH hDot = CreateSolidBrush(CLR_ACCENT);
     SelectObject(hdc, hDot);
