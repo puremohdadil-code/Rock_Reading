@@ -135,9 +135,9 @@ std::vector<ProcessManager::MemoryRegion> ProcessManager::GetReadableRegions() c
                           &mbi, sizeof(mbi))) {
         //Include committed, non-guarded, accessible regions
         if (mbi.State == MEM_COMMIT &&
-            !(mbi.Protect & PAGE_GUARD) &&
-            !(mbi.Protect & PAGE_NOACCESS)) {
-            DWORD prot = mbi.Protect & 0xFF;
+          !(mbi.Protect & PAGE_GUARD) &&
+          !(mbi.Protect & PAGE_NOACCESS)) {
+           DWORD prot = mbi.Protect & 0xFF;
             if (prot == PAGE_READONLY       || prot == PAGE_READWRITE       ||
                 prot == PAGE_WRITECOPY      || prot == PAGE_EXECUTE_READ    ||
                 prot == PAGE_EXECUTE_READWRITE || prot == PAGE_EXECUTE_WRITECOPY) {
