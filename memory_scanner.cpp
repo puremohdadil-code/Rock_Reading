@@ -130,16 +130,16 @@ static bool CompareTyped(const uint8_t* mem, const uint8_t* target,
             return target && target2 &&
                    memVal >= *reinterpret_cast<const T*>(target) &&
                    memVal <= *reinterpret_cast<const T*>(target2);
-        case ScanType::UnknownInitial:
-            return true;
-        case ScanType::Changed:
-            return previous && memVal != *reinterpret_cast<const T*>(previous);
-        case ScanType::Unchanged:
-            return previous && memVal == *reinterpret_cast<const T*>(previous);
-        case ScanType::Increased:
-            return previous && memVal > *reinterpret_cast<const T*>(previous);
-        case ScanType::Decreased:
-            return previous && memVal < *reinterpret_cast<const T*>(previous);
+      case ScanType::UnknownInitial:
+         return true;
+   case ScanType::Changed:
+           return previous && memVal != *reinterpret_cast<const T*>(previous);
+    case ScanType::Unchanged:
+          return previous && memVal == *reinterpret_cast<const T*>(previous);
+     case ScanType::Increased:
+           return previous && memVal > *reinterpret_cast<const T*>(previous);
+      case ScanType::Decreased:
+        return previous && memVal < *reinterpret_cast<const T*>(previous);
     }
     return false;
 }
