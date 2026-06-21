@@ -12,7 +12,7 @@ MemoryScanner::~MemoryScanner() {}
 
 size_t MemoryScanner::GetValueSize(ValueType type) {
     switch (type) {
-        case ValueType::Byte:   return 1;
+        case ValueType::Byte:  return 1;
         case ValueType::Int16:  return 2;
         case ValueType::Int32:  return 4;
         case ValueType::Int64:  return 8;
@@ -178,7 +178,7 @@ bool MemoryScanner::CompareValues(const uint8_t* mem, const uint8_t* target,
             return false;
         }
     }
-    return false;
+    return false; 
 }
 
 bool MemoryScanner::FirstScan(ValueType vtype, ScanType stype,
