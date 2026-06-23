@@ -12,7 +12,7 @@
 #include <cstdio>
 #include <ctime>
 #include <cmath>
-
+ 
 #include "process_manager.h"
 #include "memory_scanner.h"
 #include "game_analyzer.h"
