@@ -6,7 +6,7 @@
 #include <cstring>
 #include <cwchar>
 #include <stdexcept>
-
+ 
 MemoryScanner::MemoryScanner() {}
 MemoryScanner::~MemoryScanner() {}
 
