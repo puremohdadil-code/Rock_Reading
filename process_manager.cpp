@@ -77,7 +77,7 @@ bool ProcessManager::Attach(DWORD pid) {
             PROCESS_VM_READ | PROCESS_VM_WRITE | PROCESS_VM_OPERATION |
             PROCESS_QUERY_INFORMATION | PROCESS_QUERY_LIMITED_INFORMATION,
             FALSE, pid);
-    }
+    } 
 
     if (!m_hProcess) return false;
 
