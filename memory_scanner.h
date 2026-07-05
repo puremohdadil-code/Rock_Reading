@@ -8,7 +8,7 @@
     
 
 enum class ValueType {
-    Byte   = 0,  //1 byte  (uint8_t)
+    Byte   = 0,  //1 byte (uint8_t)
     Int16  = 1,  //2 bytes (int16_t)
     Int32  = 2,  //4 bytes (int32_t)
     Int64  = 3,  //8 bytes (int64_t)
