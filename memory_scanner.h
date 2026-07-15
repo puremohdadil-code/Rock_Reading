@@ -5,7 +5,7 @@
 #include <string>
 #include <cstdint>
 #include <stack>
- 
+  
 enum class ValueType {
     Byte   = 0,  //1 bytes (uint8_t)
     Int16  = 1,  //2 bytes (int16_t)
