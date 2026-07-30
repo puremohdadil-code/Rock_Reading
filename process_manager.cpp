@@ -8,7 +8,7 @@ ProcessManager::ProcessManager() {}
 
 ProcessManager::~ProcessManager() {
     Detach();
-}
+} 
 
 bool ProcessManager::EnableDebugPrivilege() {
     HANDLE hToken = nullptr;
