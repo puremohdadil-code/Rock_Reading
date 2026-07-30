@@ -4,7 +4,7 @@
 #include "memory_scanner.h"
 #include <algorithm>
 #include <cstring>
-#include <cwchar>
+#include <cwchar> 
 #include <stdexcept>
   
 MemoryScanner::MemoryScanner() {}
