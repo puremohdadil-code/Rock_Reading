@@ -5,7 +5,7 @@
 #include <algorithm>
   
 ProcessManager::ProcessManager() {}
-
+ 
 ProcessManager::~ProcessManager() {
     Detach();
 } 
