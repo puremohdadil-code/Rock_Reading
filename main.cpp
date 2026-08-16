@@ -1,6 +1,6 @@
 #ifndef NOMINMAX
 #define NOMINMAX
-#endif 
+#endif  
 #include <windows.h>
 #include <commctrl.h>
 #include <shellapi.h> 
