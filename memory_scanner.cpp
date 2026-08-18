@@ -3,7 +3,7 @@
 //===================================================================
 #include "memory_scanner.h"
 #include <algorithm>
-#include <cstring>
+#include <cstring> 
 #include <cwchar> 
 #include <stdexcept>
        
