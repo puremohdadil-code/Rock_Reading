@@ -3,7 +3,7 @@
 // Handles process enumeration, attachment, and memory read/write operations.
 // ==========================================================================
 #pragma once
-   
+    
 #ifndef NOMINMAX
 #define NOMINMAX
 #endif
