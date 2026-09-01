@@ -6,7 +6,7 @@
    
 ProcessManager::ProcessManager() {}
   
-ProcessManager::~ProcessManager() {
+ProcessManager::~ProcessManager() { 
     Detach();
 } 
 
