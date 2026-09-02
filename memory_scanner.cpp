@@ -1,7 +1,7 @@
 //===================================== =================================
 //The Rock Reading - Memory Scanner Implementation
 //===================================== ==============================
-#include "memory_scanner.h"
+#include "memory_scanner.h" 
 #include <algorithm>
 #include <cstring> 
 #include <cwchar> 
